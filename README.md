@@ -64,8 +64,8 @@ This option will display a table with the total sales and profit for each depart
 
 ![Supervisor-02](/images/Supervisor-02.png)
 
-### View Low Inventory
+### Create New Department
 
-This option will display all items with a inventory count lower than five.
+This option will allow the supervisor to add a new department to the store.
 
 ![Supervisor-03](/images/Supervisor-03.png)
