@@ -60,7 +60,8 @@ function promptUser() {
         fulfillOrder(itemID, itemsLeft, unitsPurchased, newProductSales, productName, basePrice, totalPrice, departmentName);
       } else {
         // not enough items
-        console.log("Insufficient quantity! Try again.");
+        console.log("");
+        console.log("Insufficient quantity of '" + productName + "'. Try again.");
         displayItems();
       }
     });
@@ -75,9 +76,11 @@ function fulfillOrder(itemID, itemsLeft, unitsPurchased, newProductSales, produc
   }, {
     item_id: itemID
   }], function(err, res) {
+    console.log("");
     console.log("Purchase summary: ");
     console.log("\tProduct Name: " + productName);
     console.log("\tTotal Price: $" + basePrice + " x " + unitsPurchased + " = $" + totalPrice);
+    console.log("");
 
     var query = "SELECT total_sales FROM departments WHERE department_name='" + departmentName + "'";
     connection.query(query, function(err, res) {
